@@ -1,10 +1,40 @@
 # Credit_Card_Fraud_Detection
+The goal of this project was to develop a ML model to predict the credit card fraudulent transactions with the help of various features. Through EDA, find out features responsible for frauds happening and their significance in fraudulent transactions.
 
 Libraries used in Sections:
-1. EDA - pandas, numpy, matplotlib, seaborn, statsmodels, scaling and sampling, outlier detection and removal, correlation, multicollinearity.
+1. EDA - pandas, numpy, matplotlib, seaborn, statsmodels, etc.
 2. Results and Metrics - sklearn, ensemble, metrics.
 
  In the project I have used models like Decision Trees, XGBoost, Random Forest with various feature engineering techniques to optimise features to keep and omit. The evaluation metrics used are PRF1.
+
+ ## Folder Structure
+**CreditCard_Fraud_Detection** </br>
+ ┣ input </br>
+ ┃ ┣ labels_obf.csv </br>
+ ┃ ┣ test_data.csv </br>
+ ┃ ┣ train_data.csv </br>
+ ┃ ┣ transactions_obf.csv </br>
+ ┃ ┗ val_data.csv </br>
+ ┣ models </br>
+ ┃ ┣ CCFraud_decision_tree_entropy.bin </br>
+ ┃ ┣ CCFraud_random_forest_entropy.bin </br>
+ ┃ ┗ CCFraud_xgboost_gbtree.bin </br>
+ ┣ notebooks </br>
+ ┃ ┣ CCFraudDetection.py </br>
+ ┃ ┗ CreditCardFraud_EDA.ipynb </br>
+ ┣ src </br>
+ ┃ ┣ __pycache__ </br>
+ ┃ ┣ config.py </br>
+ ┃ ┣ model_dispatcher.py </br>
+ ┃ ┗ train.py </br>
+ ┣ .gitattributes </br>
+ ┗ README.md </br>
+
+ **Folders** 
+ *input* - contains all the input files used in the project.
+ *models* - contains the .bin files of the different models developed.
+ *notebooks* - contains .ipynb notebooks for EDA and model evaluations.
+ *src* - contains .py executable files to build the required models. model_dispatcher.py hass all the models in it.
 
 ### EDA
 The figure below shows the top 10 acount numbers which have the maximum number of frauds against them in the dataset. They account to almost 50% of the fraudulent transaction in the dataset.
